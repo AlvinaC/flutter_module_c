@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_module_b/main.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MyModuleCApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyModuleCApp extends StatelessWidget {
+  const MyModuleCApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -56,6 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const MyApp()));
   }
 
   @override
